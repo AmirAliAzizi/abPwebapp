@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS Log In App</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+	<script src="script.js"> </script>
+</head>
+<body>
+	<div class="container" ng-app="myLogInApp" ng-controller="myLogInAppController">
+		<div class="textintro">
+			<h1>Form Validation</h1>
+			<p ng-show="msg">{{msg}}</p>
+			
+		</div>
+		<form name="myForm" ng-submit="register()">
+			<input 	type ="text"
+					name="firstname"
+					placeholder="Firstname"
+					ng-model="user.firstname"
+					ng-required="true">
+			<p class="error" ng-show="myForm.firstname.$invalid && myForm.firstname.$touched">Fill out your first name. </p>
+			<input 	type ="text"
+					name="lastname"
+					placeholder="Lastname"
+					ng-model="user.lastname"
+					ng-required="true">
+			<p class="error" ng-show="myForm.lastname.$invalid && myForm.lastname.$touched">Fill out your Last name. </p>
+			<input 	type ="email"
+					name="email"
+					placeholder="Email"
+					ng-model="user.email"
+					ng-required="true">
+			<p class="error" ng-show="myForm.email.$invalid && myForm.email.$touched">Enter your corrent Email. </p>
+			<input 	type ="password"
+					name="password"
+					placeholder="Password"
+					ng-model="user.password"
+					ng-minlength = "6" 
+					ng-required="true"
+					>
+					<!-- ng-minlength==> pass should have min six chars //-->
+			<p class="error" ng-show="myForm.password.$invalid && myForm.password.$touched">Password should be altest 6 characters long. </p>
+			<input 	type ="number"
+					name="phone"
+					placeholder="Phone Number"
+					ng-model="user.phone"
+					ng-required="true">
+			<p class="error" ng-show="myForm.phone.$invalid && myForm.phone.$touched">Fill out your number. </p>
+			<button type="submit" class="btn" ng-disabled="myForm.$invalid">submit</button>
+		</form>
+	</div>
+	
+</body>
+</html>

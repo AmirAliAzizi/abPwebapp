@@ -1,0 +1,25 @@
+> E: sender Email address is not valid
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400e1488  PS      : 0x00060530  A0      : 0x800e1566  A1      : 0x3ffb2710  
+A2      : 0x00000000  A3      : 0x3ffc47f0  A4      : 0x00000000  A5      : 0x00000000  
+A6      : 0x00000020  A7      : 0x00000000  A8      : 0x800e1485  A9      : 0x3ffb26f0  
+A10     : 0x3ffb2724  A11     : 0x3f4185a9  A12     : 0x3ffdc9ca  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x3ffdf537  SAR     : 0x00000019  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000008  LBEG    : 0x4008a5c9  LEND    : 0x4008a5d9  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400e1485:0x3ffb2710 0x400e1563:0x3ffb2750 0x400e5df5:0x3ffb2770 0x400e5edb:0x3ffb27a0 0x400d2e13:0x3ffb27c0 0x400ea33d:0x3ffb2820
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13836
+load:0x40080400,len:3608
+entry 0x400805f0
